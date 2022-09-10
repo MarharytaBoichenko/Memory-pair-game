@@ -1,3 +1,9 @@
+$primaryColor: #000;
+$mainFont: "Merriweather", serif;
+$bcgColor: #30c5f7;
+$bcgMenuColor: #ffffff;
+$btnColor: #f9d553;
+
 body {
   min-height: 100%;
   font-family: $mainFont;
@@ -106,7 +112,6 @@ body {
   height: 100vh;
   flex-direction: column;
   align-items: center;
-  // border: 1px solid green;
 }
 
 .instruction__text {
