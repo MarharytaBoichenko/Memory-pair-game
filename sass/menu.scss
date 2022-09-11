@@ -40,7 +40,6 @@ body {
   margin-right: auto;
 }
 
-/* entire container, keeps perspective */
 .flip-card {
   perspective: 1000px;
 }
@@ -48,6 +47,7 @@ body {
 .flip-card.open .flipper {
   transform: rotateY(180deg);
 }
+
 .open {
   pointer-events: none;
 }
@@ -75,19 +75,16 @@ body {
   backface-visibility: hidden;
 }
 
-/*cards__item--frontpane, placed abovecards__item--back*/
 .cards__item--front {
   background-image: url("../images/yellow.png");
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 2;
+  z-index: 99;
   cursor: pointer;
 }
 
-/* back, initially hidden pane */
 .cards__item--back {
   transform: rotateY(180deg);
-  // background-color: blanchedalmond;
   pointer-events: none;
 }
 
@@ -103,23 +100,25 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  // border: 1px solid grey;
   padding: 10px;
 }
 
-.instruction {
+.instruction,
+.congrats {
   display: flex;
   height: 100vh;
   flex-direction: column;
   align-items: center;
 }
 
+.congrats__text,
 .instruction__text {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 30%;
 }
 
+.restart,
 .instruction__button {
   width: 100px;
   height: 30px;
@@ -132,24 +131,12 @@ body {
 .hidden {
   visibility: hidden;
   pointer-events: none;
-  // position: absolute;
-  // clip: rect(1px 1px 1px 1px);
-  // padding: 0;
-  // border: 0;
-  // height: 1px;
-  // width: 1px;
-  // overflow: hidden;
 }
 
-// @media screen and (min-width: 480px) and (max-width: 767px) {
-//   .cards {
-//     width: 400px;
-//   }
-
-//   .instruction {
-//     width: 400px;
-//   }
-// }
+.congrats {
+  display: flex;
+  align-items: center;
+}
 
 @media screen and (min-width: 768px) {
   .cards {
@@ -175,7 +162,8 @@ body {
     object-fit: cover;
   }
 
-  .instruction {
+  .instruction,
+  .congrats {
     width: 600px;
     height: 600px;
     display: flex;
@@ -183,11 +171,13 @@ body {
     align-items: center;
   }
 
+  .congrats__text,
   .instruction__text {
     font-size: 2rem;
     text-align: center;
   }
 
+  .restart,
   .instruction__button {
     width: 120px;
     height: 50px;
@@ -216,7 +206,8 @@ body {
     object-fit: cover;
   }
 
-  .instruction {
+  .instruction,
+  .congrats {
     display: flex;
     width: 800px;
     height: 800px;
@@ -224,11 +215,13 @@ body {
     align-items: center;
   }
 
+  .congrats__text,
   .instruction__text {
     font-size: 2rem;
     text-align: center;
   }
 
+  .restart,
   .instruction__button {
     width: 120px;
     height: 50px;
