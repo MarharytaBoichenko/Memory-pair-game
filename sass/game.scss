@@ -40,6 +40,10 @@ body {
   margin-right: auto;
 }
 
+.cards__item {
+  box-shadow: 10px 10px 10px 5px rgba(17, 45, 158, 0.63);
+}
+
 .flip-card {
   perspective: 1000px;
 }
@@ -126,6 +130,13 @@ body {
   border: transparent;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.restart:hover,
+.restart:focus,
+.instruction__button:hover,
+.instruction__button:focus {
+  background-color: #efe0ab;
 }
 
 .hidden {
